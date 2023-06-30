@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 export const Label = styled.label`
   display: block;
-  font-weight: 500;
+  font-size: 1.4rem;
   // margin-bottom: 10px;
   margin-left: 10px;
   color: blue;
@@ -15,6 +15,7 @@ export const InputFilter = styled.input`
   overflow: hidden;
   border-radius: 10px;
   outline: transparent;
+  font-size: 1.4rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.28) 0px 0px 0px 1px;
 

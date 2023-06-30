@@ -3,20 +3,20 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
   border: 2px solid rgba(33, 33, 33, 0.2);
   padding: 10px;
-  width: 90%;
+  /* width: 90%; */
   background-color: rgba(181, 175, 181, 0.5);
   border-radius: 10px;
 `;
 export const Label = styled.label`
   display: block;
-  font-weight: 500;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 `;
 export const InputContact = styled.input`
   display: block;
   width: 80%;
-
-  padding: 10px;
+  font-size: 1.4rem;
+  padding: 15px;
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 10px;
@@ -43,16 +43,17 @@ export const Button = styled.button`
   background-color: rgba(181, 175, 181, 0.9);
   background-color: rgba(0, 0, 0, 0.25) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.28) 0px 0px 0px 1px;
-  color: blue;
-  font-size: 600;
+  color: white;
+  background-color: blue;
+  font-size: 1.5rem;
   line-height: 1.25rem;
   font-weight: 600;
   justify-content: center;
-  width: 120px;
+  width: 150px;
   margin-top: 25px;
   margin-right: auto;
   margin-left: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   border-color: blue;
 
   :hover {

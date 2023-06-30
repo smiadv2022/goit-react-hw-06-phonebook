@@ -12,12 +12,12 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   display: flex;
-  padding: 1px;
+  padding: 3px;
 
   background-color: rgba(0, 0, 0, 0.25) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.28) 0px 0px 0px 1px;
   color: blue;
-  font-size: 600;
+  font-size: 1.2rem;
   line-height: 1.25rem;
   font-weight: 600;
   justify-content: center;
@@ -38,12 +38,12 @@ export const List = styled.ul`
   padding: 0px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 600;
+  gap: 10px;
+  font-size: 1.4rem;
 
   border: 2px solid rgba(33, 33, 33, 0.2);
   padding: 10px;
-  width: 90%;
+  /* width: 90%; */
   background-color: rgba(181, 175, 181, 0.5);
   border-radius: 10px;
 `;
@@ -52,8 +52,8 @@ export const Item = styled.li`
   gap: 5px;
   align-items: center;
 
-  padding: 5px;
-  font-size: 400;
+  padding: 10px;
+  font-size: 1.4rem;
 
   line-height: 1rem;
   border: 1px solid lightgray;
@@ -65,7 +65,7 @@ export const Title = styled.h2`
   margin: 0px;
   padding: 0px;
   color: #111827;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2rem;
   font-weight: 600;
   letter-spacing: -0.025em;

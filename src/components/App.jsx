@@ -1,21 +1,20 @@
-import { Container, Title, Section } from './App.styled';
+import { Navigate, Route, Routes } from 'react-router-dom';
+// import { Container, Title, Section } from './App.styled';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
-import { Filter } from './Filter/Filter';
+// import { Filter } from './Filter/Filter';
+import Layout from './Layout/Layout';
 
 export const App = () => {
   return (
-    <Container>
-      <Section>
-        <Title>Phonebook</Title>
-        <ContactForm />
-      </Section>
-      <Section>
-        <Title>Contacts</Title>
-        <Filter />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<ContactList />} />
+        <Route path="ContactForm" element={<ContactForm />} />
 
-        <ContactList />
-      </Section>
-    </Container>
+        {/* <Route path="*" element={<div> Nothing found </div>} /> */}
+        <Route path="*" element={<Navigate to="/" />} />
+      </Route>
+    </Routes>
   );
 };

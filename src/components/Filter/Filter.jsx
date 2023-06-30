@@ -6,7 +6,6 @@ import { setFilter } from 'store/Filter/FilterSlice';
 export const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(state => state.filter);
-  console.log('filtert', filter);
 
   const handleChange = event => {
     dispatch(setFilter(event.currentTarget.value));

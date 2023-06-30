@@ -1,7 +1,9 @@
 // import PropTypes from 'prop-types';
+import { Filter } from 'components/Filter/Filter.jsx';
 import { List, Item, Button } from './ContactList.styled.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'store/Contacts/ContactSlice.js';
+import { Section, Title } from 'components/App.styled.js';
 
 export const ContactList = () => {
   const filter = useSelector(state => state.filter);
@@ -21,18 +23,27 @@ export const ContactList = () => {
 
   const onDeleteContact = id => {
     dispatch(deleteContact(id));
-
-    console.log('f', id);
   };
 
   return (
-    <List>
-      {filterContact().map(contact => (
-        <Item key={contact.id}>
-          {contact.name}: {contact.number}
-          <Button onClick={() => onDeleteContact(contact.id)}>Delete</Button>
-        </Item>
-      ))}
-    </List>
+    <>
+      <Section>
+        <Title>Phonebook</Title>
+        <Filter></Filter>
+      </Section>
+      <Section>
+        <List>
+          <Title>ContactList</Title>
+          {filterContact().map(contact => (
+            <Item key={contact.id}>
+              {contact.name}: {contact.number}
+              <Button onClick={() => onDeleteContact(contact.id)}>
+                Delete
+              </Button>
+            </Item>
+          ))}
+        </List>
+      </Section>
+    </>
   );
 };

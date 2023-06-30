@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Title = styled.h2`
   margin: 0px;
   color: #111827;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2rem;
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -24,9 +24,9 @@ export const Section = styled.div`
   gap: 10px;
   border: 2px solid rgba(33, 33, 33, 0.2);
   padding: 10px;
-  width: 70%;
+  width: 1200px;
   margin: 0px;
-  padding: 20px;
+  /* padding: 20px; */
   background-color: rgba(181, 175, 181, 0.5);
   border-radius: 10px;
   margin-right: auto;
