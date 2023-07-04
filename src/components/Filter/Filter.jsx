@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { InputFilter, Label } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'store/Filter/FilterSlice';

@@ -3,14 +3,15 @@ import React, { useState } from 'react';
 import { Form, InputContact, Label, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'store/Contacts/ContactSlice';
-import { Section } from 'components/App.styled';
+import { Section } from 'components/App/App.styled';
 import { useNavigate } from 'react-router-dom';
+import { getContactSelector } from 'store/Selector';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(getContactSelector);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleSubmit = e => {

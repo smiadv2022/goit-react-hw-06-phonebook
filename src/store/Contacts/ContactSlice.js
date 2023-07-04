@@ -28,10 +28,10 @@ const contactsSlice = createSlice({
       },
     },
     deleteContact(state, action) {
-      // state.filter(contact => contact.id !== action.payload);
       const index = state.findIndex(contact => contact.id === action.payload);
       state.splice(index, 1);
-      // console.log('11111111', action.payload, state);
+
+      // state.filter(contact => contact.id !== action.payload);
     },
   },
 });

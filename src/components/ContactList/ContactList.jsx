@@ -1,26 +1,21 @@
-// import PropTypes from 'prop-types';
 import { Filter } from 'components/Filter/Filter.jsx';
 import { List, Item, Button } from './ContactList.styled.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'store/Contacts/ContactSlice.js';
-import { Section, Title } from 'components/App.styled.js';
+import { Section, Title } from 'components/App/App.styled.js';
+import { getContactSelector, getFilterSelector } from 'store/Selector.js';
 
 export const ContactList = () => {
-  const filter = useSelector(state => state.filter);
-  const contacts = useSelector(state => state.contacts);
-  // console.log('contactsCCC', contacts);
+  const filter = useSelector(getFilterSelector);
+  const contacts = useSelector(getContactSelector);
 
   const dispatch = useDispatch();
 
   const filterContact = () => {
-    if (filter !== '') {
-      return contacts.filter(contact =>
-        contact.name.toLowerCase().includes(filter.toLowerCase())
-      );
-    }
-    return contacts;
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
+    );
   };
-
   const onDeleteContact = id => {
     dispatch(deleteContact(id));
   };
